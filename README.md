@@ -4,8 +4,8 @@
 
 
 ## Table of contents
-* [About Me](#Swipe Right)
-* [Tech I've used](#tech)
+* [About Me](#SwipeRight)
+* [Tech I've used](#Tech)
 * [Doge](#Doge)
 
 ## Swipe Right
