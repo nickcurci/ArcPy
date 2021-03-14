@@ -10,4 +10,5 @@
 
 ### The polygon of whale sightings/roaming area is then modified to exclude overland areas around Nova Scotia.
 
-### This erase polygon ONLY exludes Nova Scotia land area as using other polygons along the Canadian coastline yielding large and unnecessary file sizes. 
+### This erase polygon ONLY exludes Nova Scotia land area as using other polygons along the Canadian coastline yielded large and unnecessary file sizes. 
+#### This offers no real difference but should be noted.
