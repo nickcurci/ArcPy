@@ -143,7 +143,7 @@ print("area calculation complete")
 ###### CHANGE YOUR FILEPATH #######
 ###### KEEP FILE NAME #############
 ###################################
-CanadaProvinces = r"C:\Data\d1\Midterm\CanadianBorders\lpr_000b16a_e.shp"
+CanadaProvinces = r"C:\Data\d1\Midterm\NovaScotiaCounties\County_Polygons.shp"
 FinalShapefile = r"C:\data\d1\Midterm\FinalShapefiled.shp"
 arcpy.Erase_analysis(in_features=IntersectedWhales, erase_features=CanadaProvinces,
                      out_feature_class=FinalShapefile, cluster_tolerance="")
