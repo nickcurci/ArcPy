@@ -1,22 +1,10 @@
-#####
-# Step 3 - Executing multiple tools - and automating most of it
-#####
-
-# We will use the exact same approach to generate a heatmap from a CSV file, but this time
-# You will have to automate the extraction of start extent, opposite corner etc for the fishnet
-# generation. I have given hints, but everything you are using here has been shown in last week's
-# and this week's session.
-
-# Using Step_3_Birds.csv:
+##### Imports
 import arcpy
-import csv
 import pandas
+#Set Enviornment
 arcpy.env.overwriteOutput = True  # If you get "already exists error" even when True, ensure file is not open.
 
-#Read in the csv file with both species. Loop through it with the aim of pupulating a list with unique species names.
-#Using that list of unique species names (length should be two for this challenge),
-#open the file twice, match on species name and save rows to new csv file with same name as the species.
-#Using that species list again, now do all the shape file conversion, heat map etc.
+#Read the CSV, group by species, split into two datasets and send to CSV
 df = pandas.read_csv(r"C:\Data\d1\5\All_Files\AllWhales.csv")
 groupedWhales = df.groupby(df.vernacularName)
 print(groupedWhales)
@@ -24,57 +12,56 @@ Sperm = groupedWhales.get_group("WHALE-SPERM")
 Right = groupedWhales.get_group("WHALE-RIGHT")
 Sperm.to_csv(r"C:\Data\d1\5\All_Files\SpermWhales.csv")
 Right.to_csv(r"C:\Data\d1\5\All_Files\RightWhales.csv")
-# 1. Convert Step_3_Cepphus_grylle.csv to a shapefile.
+
+#Convert first dataset into shapefile
 arcpy.env.workspace = r"C:\Data\d1\5\ALL_FILES"
 in_Table = r"SpermWhales.csv"
 x_coords = "decimalLatitude"
 y_coords = "decimalLongitude"
 out_Layer = "SpermWhales"
 saved_Layer = r"SpermWhales_Output.shp"
-
+#set spatial reference
 spRef = arcpy.SpatialReference(4326)  # 4326 == WGS 1984
 lyr = arcpy.MakeXYEventLayer_management(in_Table, x_coords, y_coords, out_Layer, spRef, "")
-
+#check the number of records
 print(arcpy.GetCount_management(out_Layer))
-# Save to a layer file
+#save to a layer file
 arcpy.CopyFeatures_management(lyr, saved_Layer)
 if arcpy.Exists(saved_Layer):
     print("Created file successfully!")
-# 2. Extact the Extent, i.e. XMin, XMax, YMin, YMax of the generated Cepphus_grylle shapefile.
+#extact the Extent(XMin, XMax, YMin, YMax) of the shapefile.
 desc = arcpy.Describe(saved_Layer)
 XMin = desc.extent.XMin
 XMax = desc.extent.XMax
 YMin = desc.extent.YMin
 YMax = desc.extent.YMax
-# 3. Generate a fishnet, but this time define the originCoordinate, yAxisCoordinate and oppositeCorner
-# using the extracted extent from above. Hint: Formatting of the coordinate is important when generating
-# the Fishnet, you must present it as: "-176.87 -41", note the space inbetween, and the fact that the
-# entire thing is a string. Hint use: cellSizes of 0.25 degrees.
 
+#Generate a fishnet
 arcpy.env.outputCoordinateSystem = arcpy.SpatialReference(4326)
-
-outFeatureClass = "Coding_Challenge_SpermWhales.shp"  # Name of output fishnet
-
-originCoordinate = str(XMin) + " " + str(YMin)  # Left bottom of our point data
-yAxisCoordinate = str(XMin) + " " + str(YMin + 1.0)  # This sets the orientation on the y-axis, so we head north
+#Name of Fishnet
+outFeatureClass = "Coding_Challenge_SpermWhales.shp"
+#Left Bottom Point of Data
+originCoordinate = str(XMin) + " " + str(YMin)
+#Y axis orientation
+yAxisCoordinate = str(XMin) + " " + str(YMin + 1.0)
 cellSizeWidth = "0.25"
 cellSizeHeight = "0.25"
-numRows =  ""  # Leave blank, as we have set cellSize
-numColumns = "" # Leave blank, as we have set cellSize
+numRows =  ""
+numColumns = ""
 oppositeCorner = str(XMax) + " " + str(YMax)  # i.e. max x and max y coordinate
 labels = "NO_LABELS"
-templateExtent = "#"  # No need to use, as we have set yAxisCoordinate and oppositeCorner
-geometryType = "POLYGON"  # Create a polygon, could be POLYLINE
-
+templateExtent = "#"  #
+geometryType = "POLYGON"  #
+#create the fishnet
 arcpy.CreateFishnet_management(outFeatureClass, originCoordinate, yAxisCoordinate,
                                cellSizeWidth, cellSizeHeight, numRows, numColumns,
                                oppositeCorner, labels, templateExtent, geometryType)
-
+#check to see if this was successful
 if arcpy.Exists(outFeatureClass):
     print("Created Fishnet file successfully!")
 
 print("starting spatial join")
-# 4. Undertake a Spatial Join to join the fishnet to the observed points.
+#Join the fishnet to observed points
 target_features="Coding_Challenge_SpermWhales.shp"
 join_features="SpermWhales_Output.shp"
 out_feature_class="SpermWhales_HeatMap.shp"
@@ -88,10 +75,10 @@ distance_field_name=""
 arcpy.SpatialJoin_analysis(target_features, join_features, out_feature_class,
                            join_operation, join_type, field_mapping, match_option,
                            search_radius, distance_field_name)
-
+#check to see if completed
 print("completed spatial join")
-# 5. Check that the heatmap is created and delete the intermediate files (e.g. species shapefile and fishnet). Hint:
-# arcpy.Delete_management()..
+
+#Check that the heatmap is created and delete the intermediate files
 if arcpy.Exists(out_feature_class):
     print("Created Heatmap file successfully!")
     print("Deleting intermediate files")
@@ -185,4 +172,5 @@ if arcpy.Exists(out_feature_class1):
 import arcpy
 arcpy.env.overwriteOutput = True  # If you get "already exists error" even when True, ensure file is not open in
 # ArcGIS Pro or an other program such as Excel.
+
 
