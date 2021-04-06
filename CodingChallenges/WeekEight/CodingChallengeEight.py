@@ -1,6 +1,5 @@
 
-# This function takes in two CSV Files outside of the functions, transforms them to shapefiles,
-# puts them into the function and then buffers them both before intersecting them.
+# This function takes in two CSV Files, transforms them to shapefiles, and then buffers them both before intersecting them.
 # We will use the Killer Whale and Blue Whale sighting CSV files to determine their roaming area
 import os, arcpy
 from arcpy.sa import *
