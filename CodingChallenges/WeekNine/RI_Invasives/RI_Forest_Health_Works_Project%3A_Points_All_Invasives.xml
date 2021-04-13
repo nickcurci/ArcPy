@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20111205</pubdate>
+                <title>RI Forest Health Works Project: Points All Invasives</title>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>Rhode Island Natural History Survey</publish>
+                </pubinfo>
+                <othercit>Suggested bibliographic reference: RIGIS, 2012. Rhode Island Forest Health Works Project: Points. Rhode Island Geographic Information System (RIGIS) Data Distribution System, URL: http://www.rigis.org, Environmental Data Center, University of Rhode Island, Kingston, Rhode Island (last date accessed: 16 June 2012).</othercit>
+                <onlink>http://services2.arcgis.com/S8zZg9pg23JUEexQ/arcgis/rest/services/FHWP_Points_All/FeatureServer</onlink>
+                <onlink>http://data.rigis.org/BIO/FHWP12.zip</onlink>
+                <lworkcit>
+                    <citeinfo>
+                        <pubdate>19930101</pubdate>
+                        <title>Rhode Island Geographic Information System (RIGIS) Data Distribution System</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>The Forest Health Works Project (FHWP), a partnership between the Rhode Island Natural History Survey (RINHS) and the Rhode Island Department of Environmental Management (RIDEM), conducted rapid inventories for invasive plants in selected areas across Rhode Island. Details are available in the Forest Health Works Project final report, available by contacting the Rhode Island Natural History Survey. The dataset described by this metadata record represents GPS locations of photo points and invasive plant communities 20 ft in diameter or smaller documented by the FHWP. 
+
+The purpose of this dataset is to represent how invasive plant species are distributed throughout core forested areas and other selected areas in Rhode Island. It was used by the FHWP in determining where invasive plant treatment would occur. This dataset is intended for use by the public.</abstract>
+            <purpose>This dataset represents how invasive plant species are distributed throughout core forested areas and other selected areas in Rhode Island. It was used by the FHWP in determining where invasive plant treatment would occur.</purpose>
+            <supplinf>The Forest Health Works Project final report is available by contacting the Rhode Island Natural History Survey.</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <rngdates>
+                    <begdate>20091101</begdate>
+                    <enddate>20111130</enddate>
+                </rngdates>
+            </timeinfo>
+            <current>ground condition</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>None planned</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-180</westbc>
+                <eastbc>180</eastbc>
+                <northbc>90</northbc>
+                <southbc>-90</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>core</themekey>
+                <themekey>species</themekey>
+                <themekey>plant</themekey>
+                <themekey>habitat</themekey>
+                <themekey>forest</themekey>
+                <themekey>invasive</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>biota</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>Rhode Island</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>These data are shared under the RIGIS license agreement, which can be viewed below:
+
+This dataset is provided 'as is.’ The producer(s) of 
+this dataset, contributors to this dataset, the Rhode Island Geographic 
+Information System (RIGIS) consortium, the State of Rhode Island, and 
+the University of Rhode Island do not make any warranties of any kind 
+for this dataset, and are not liable for any loss or damage however and 
+whenever caused by any use of this dataset.
+
+Please acknowledge both RIGIS and the primary producer(s) of 
+this dataset in any derived products.  Versions of the RIGIS logo 
+suitable for both printed and web-based products are available at http://www.rigis.org/logos.
+RI Natural History Survey Use Constraints:
+The producer makes no warranty, express or implied, 
+related to the accuracy, reliability, completeness or currentness of 
+these data or their suitability for any particular purpose or use. 
+Private land depicted representative of invasive plant species on a 
+particular property does not indicate public access to that site.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Rhode Island Natural History Survey</cntorg>
+                    <cntper>David W. Gregg</cntper>
+                </cntorgp>
+                <cntpos>Executive Director</cntpos>
+                <cntaddr>
+                    <addrtype>mailing</addrtype>
+                    <address>PO Box 1858</address>
+                    <city>Kingston</city>
+                    <state>RI</state>
+                    <postal>02881</postal>
+                </cntaddr>
+                <cntvoice>401-874-5800</cntvoice>
+                <cntfax>401-874-5868</cntfax>
+                <cntemail>dgregg@rinhs.org</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <datacred>URI EDC, RIGIS; RI Natural History Survey</datacred>
+        <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.4.1.5686</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>All GIS data were individually cross-checked against field data (paper datasheets) and other QAQC procedures were followed to insure both spatial and attribute consistency and accuracy. During the QAQC process fewer than 5% of the records had errors. All known errors were corrected.</attraccr>
+        </attracc>
+        <logic>none</logic>
+        <complete>none</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>none</horizpar>
+            </horizpa>
+        </posacc>
+        <lineage>
+            <procstep>
+                <procdesc>The FHWP GIS database of invasive species represents 2 1/2 years of field work mapping invasives in the state of Rhode Island. The field work was conducted by Rhode Island Natural History Survey scientists. The mapping was done using points, lines, and polygons. All field mapping was done using a Garmin GPSMap 60CSx GPS device and a field notebook. The "FHWP_pts_all" file is a point dataset of GPS locations that represents photo points and invasive plant communities 20 ft in diameter or smaller. Stands larger than 20 ft in diameter were mapped as a polygon and as individual species (ACPL_NorwayMaple, e.g.). The "FHWP_tracks_all" file represents a bread-crumb trail of the areas surveyed by field crews. All GPS data were intersected on the 2008 e911 Pictometry statewide imagery. Stands (polygons) were mapped by heads-up digitizing in ArcMap using GPS locations as guide and 2008 aerial photography as a base map. At the beginning of the project, a database schema was developed to insure attribute conformity. All GIS data were individually cross-checked against field data (paper datasheets) and other QAQC procedures were followed to insure both spatial and attribute consistency and accuracy. During the QAQC process fewer than 5% of the records had errors. All errors were corrected. Details for how these invasive plant species data were developed may be found the in the FHWP final report. This report is available online at "http://rinhs.org/who-we-are-what-we-do/programs-projects/fhwp" or by directly contacting the Rhode Island Natural History Survey. Contributors to and developers of these data include Mike Bradley, James Barnes, Hope Leeson, Grace Lentini, and Jackie VanSant.</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>Rhode Island Natural History Survey</cntorg>
+                            <cntper>David W. Gregg</cntper>
+                        </cntorgp>
+                        <cntpos>Executive Director</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing</addrtype>
+                            <address>PO Box 1858</address>
+                            <city>Kingston</city>
+                            <state>RI</state>
+                            <postal>02881</postal>
+                        </cntaddr>
+                        <cntvoice>401-874-5800</cntvoice>
+                        <cntfax>401-874-5868</cntfax>
+                        <cntemail>dgregg@rinhs.org</cntemail>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Data contributed to RIGIS by the Rhode Island Natural History Survey. Data exported from a flat geodatabase to individual shapefiles. Metadata reviewed, content updated in partnership with FHWP staff, minor corrections made to formatting, RIGIS distribution information added.</procdesc>
+                <procdate>20120615</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>University of Rhode Island Environmental Data Center</cntorg>
+                            <cntper>Greg Bonynge</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>1 Greenhouse Road</address>
+                            <city>Kingston</city>
+                            <state>RI</state>
+                            <postal>02881</postal>
+                        </cntaddr>
+                        <cntvoice>401-874-2180</cntvoice>
+                        <cntemail>greg@edc.uri.edu</cntemail>
+                        <cntinst>email preferred</cntinst>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>3188</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>FHWP_pts_ALL</enttypl>
+                <enttypd>This is a point data set of an invasive plant species mapped by the FHWP during the 2010 field season</enttypd>
+                <enttypds>RINHS</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>LifeStage</attrlabl>
+                <attrdef>Description of the stage of life representing all of the individuals of the invasive plant species within the polygon.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>M</edomv>
+                        						
+                        <edomvd>mature</edomvd>
+                        						
+                        <edomvds>RINHS</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Other</attrlabl>
+                <attrdef>Additional information.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>num_Indivi</attrlabl>
+                <attrdef>Estimation of the number of invasive plant species within the 20' diameter point.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>0</rdommin>
+                        						
+                        <rdommax>100</rdommax>
+                        						
+                        <attrunit>individual plant</attrunit>
+                        						
+                        <attrmres>0</attrmres>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>FileName</attrlabl>
+                <attrdef>Unique alphanumeric combination representing who collected the data and when it was taken.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Point_num</attrlabl>
+                <attrdef>Represents actual waypoint number taken on site using the GPS unit.</attrdef>
+                <attrdefs>Garmin GPSMap 60CSx</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>automatically generated</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>id</attrlabl>
+                <attrdef>An ID value assigned to location.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PhotoW</attrlabl>
+                <attrdef>All photos are taken in one of the four cardinal directions, are spatially referenced and available to view via this URL.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PointNotes</attrlabl>
+                <attrdef>Additional information thought necessary in addition to required information.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PhotoE</attrlabl>
+                <attrdef>All photos are taken in one of the four cardinal directions, are spatially referenced and available to view via this URL.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Owner</attrlabl>
+                <attrdef>Property owner of survey locale.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Site</attrlabl>
+                <attrdef>Location of the invasive plant species.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>photo</attrlabl>
+                <attrdef>Attribute flag that indicates if a photo is associated with the point.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>y</edomv>
+                        						
+                        <edomvd>yes</edomvd>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Habitat</attrlabl>
+                <attrdef>Description of habitat where all individuals of the invasive plant species are found within the polygon.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>I</edomv>
+                        						
+                        <edomvd>riparian</edomvd>
+                        						
+                        <edomvds>RINHS</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PhotoS</attrlabl>
+                <attrdef>All photos are taken in one of the four cardinal directions, are spatially referenced and available to view via this URL.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Coordinates defining the features.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PhotoN</attrlabl>
+                <attrdef>All photos are taken in one of the four cardinal directions, are spatially referenced and available to view via this URL.</attrdef>
+                <attrdefs>RINHS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Species</attrlabl>
+                <attrdef>USDA Invasive Plant Species Code</attrdef>
+                <attrdefs>USDA</attrdefs>
+                <attrdomv>
+                    					
+                    <codesetd>
+                        						
+                        <codesetn>USDA PLANTS Database</codesetn>
+                        						
+                        <codesets>http://plants.usda.gov/java</codesets>
+                        					
+                    </codesetd>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Treatment_</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>University of Rhode Island Environmental Data Center</cntorg>
+                    <cntper>Erica Tefft</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>1 Greenhouse Road</address>
+                    <city>Kingston</city>
+                    <state>RI</state>
+                    <postal>02881</postal>
+                </cntaddr>
+                <cntvoice>401-874-5054</cntvoice>
+                <cntemail>erica@edc.uri.edu</cntemail>
+                <cntinst>email preferred</cntinst>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>Esri shapefile</formname>
+                    <filedec>ZIP</filedec>
+                </digtinfo>
+                <digtopt>
+                    <onlinopt>
+                        <computer>
+                            <networka>
+                                <networkr>http://www.rigis.org</networkr>
+                            </networka>
+                        </computer>
+                    </onlinopt>
+                </digtopt>
+            </digform>
+            <fees>No fee for downloading directly from the RIGIS Data Distribution System located at http://www.rigis.org.</fees>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20161115</metd>
+        <metrd>20120615</metrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Rhode Island Natural History Survey</cntorg>
+                    <cntper>Grace Lentini</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing</addrtype>
+                    <address>PO Box 1858</address>
+                    <city>Kingston</city>
+                    <state>RI</state>
+                    <postal>02881</postal>
+                </cntaddr>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
