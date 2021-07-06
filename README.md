@@ -1,4 +1,4 @@
-# Arcy
+# ArcPy
 
 ## This repo contains projects surrounding ArcPy and ArcGIS Pro
 
